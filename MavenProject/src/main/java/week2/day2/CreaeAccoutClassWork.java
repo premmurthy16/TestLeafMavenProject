@@ -50,7 +50,7 @@ public class CreaeAccoutClassWork {
 		System.out.println(driver.getTitle());
 
 		// close the browser
-		driver.close();
+		// driver.close();
 
 	}
 
