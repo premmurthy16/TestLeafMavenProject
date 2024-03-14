@@ -26,16 +26,10 @@ public class InteractionswithCheckboxes {
 				By.xpath("//span[contains(text(),'Basic')]/preceding-sibling::div[contains(@class,'ui-chkbox-box')]"))
 				.click();
 
-		// span[contains(text(),'Basic')]/preceding-sibling::div[contains(@class,'ui-chkbox-box')]
-
-		// div[contains(@class,'ui-chkbox-box ui-widget')]
-		// select the Ajax checkbox
-
 		driver.findElement(
 				By.xpath("//span[contains(text(),'Ajax')]/preceding-sibling::div[contains(@class,'ui-chkbox-box')]"))
 				.click();
 
-		//// span[contains(text(),'Ajax')]/preceding-sibling::div[contains(@class,'ui-chkbox-box')]
 		// verify the verify message
 
 		String expectedAjaxCheckboxMsg = "Checked";
