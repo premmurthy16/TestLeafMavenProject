@@ -1,13 +1,17 @@
 package week2.day2.homework;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class InteractionswithCheckboxes {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		ChromeDriver driver = new ChromeDriver();
 
@@ -50,6 +54,10 @@ public class InteractionswithCheckboxes {
 		driver.findElement(By.xpath(
 				"//h5[text()='Choose your favorite language(s)']/following::div[contains(@class,'ui-chkbox-box ui-widget')][1]"))
 				.click();
+
+		driver.findElement(By.xpath(
+				"//h5[text()='Choose your favorite language(s)']/following::div[contains(@class,'ui-chkbox-box ui-widget')][2]"))
+				.click();
 		// select the Tri-State Checkbox
 		driver.findElement(By.xpath(
 				"//h5[text()='Tri State Checkbox']/following::div[@data-iconstates='[\"\",\"ui-icon ui-icon-check\",\"ui-icon ui-icon-closethick\"]']"))
@@ -78,7 +86,10 @@ public class InteractionswithCheckboxes {
 		// verify the toggle message
 
 		String expectedToggleMsg = "Checked";
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
 
+		wait.until(ExpectedConditions
+				.visibilityOf(driver.findElement(By.xpath("//div[@class='ui-growl-message']//span"))));
 		String actualToggleMsg = driver.findElement(By.xpath("//div[@class='ui-growl-message']//span")).getText();
 
 		if (expectedToggleMsg.equalsIgnoreCase(actualToggleMsg)) {
@@ -91,6 +102,52 @@ public class InteractionswithCheckboxes {
 			System.out.println("Toggle Switch is Off");
 		}
 
+		// verify if checkbox disbaled
+
+		if (driver.findElement(By.xpath(
+				"//div[@class='ui-chkbox-box ui-widget ui-corner-all ui-state-default ui-state-disabled ui-state-disabled']"))
+				.isEnabled() == true) {
+
+			System.out.println("check box is disabled");
+
+		} else {
+			System.out.println("check box is not disabled");
+
+		}
+
+		driver.findElement(By.xpath("//ul[contains(@class,'ui-selectcheckboxmenu-multiple-container ui-widget')]"))
+				.click();
+
+		List<WebElement> list = driver.findElements(By.xpath(
+				"//li[contains(@class,'ui-selectcheckboxmenu-item ui-selectcheckboxmenu-list-item')]//div/div/following-sibling::div"));
+
+		for (int i = 0; i < list.size(); i++) {
+
+			list.get(i).click();
+
+			Thread.sleep(20);
+
+		}
+
+		// close the selection dropdown
+
+		driver.findElement(By.xpath("//a[@class='ui-selectcheckboxmenu-close ui-corner-all']")).click();
+
+		// print the selected County Name
+
+		List<WebElement> nameList = driver.findElements(By.xpath(
+				"//ul[@class='ui-selectcheckboxmenu-multiple-container ui-widget ui-inputfield ui-state-default ui-corner-all']//li"));
+
+		System.out.print("Following Countries are selected ");
+		for (int i = 0; i < nameList.size(); i++) {
+
+			String contryName = nameList.get(i).getText();
+
+			System.out.print(" " + contryName);
+
+		}
+
+		driver.close();
 	}
 
 }
