@@ -21,10 +21,6 @@ public class PVRCinemas {
 		// select chennai
 		driver.findElement(By.xpath("//h6[text()='Chennai']")).click();
 
-		// accept the alert popup
-
-		// driver.switchTo().alert().accept();
-
 		// select Cinema in Quick Book
 
 		driver.findElement(By.xpath("//span[text()='Cinema']")).click();
