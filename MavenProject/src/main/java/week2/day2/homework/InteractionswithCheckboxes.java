@@ -84,6 +84,7 @@ public class InteractionswithCheckboxes {
 
 		wait.until(ExpectedConditions
 				.visibilityOf(driver.findElement(By.xpath("//div[@class='ui-growl-message']//span"))));
+
 		String actualToggleMsg = driver.findElement(By.xpath("//div[@class='ui-growl-message']//span")).getText();
 
 		if (expectedToggleMsg.equalsIgnoreCase(actualToggleMsg)) {

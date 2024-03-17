@@ -77,6 +77,7 @@ public class CreateAccount {
 			System.out.println("Unable to Create the Account");
 		}
 
+		driver.close();
 	}
 
 }
