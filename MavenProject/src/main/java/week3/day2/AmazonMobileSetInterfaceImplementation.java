@@ -64,6 +64,8 @@ public class AmazonMobileSetInterfaceImplementation {
 			System.out.println("Mobile Price in Random Order " + randomOrder);
 
 		}
+		driver.close();
 
 	}
+
 }
