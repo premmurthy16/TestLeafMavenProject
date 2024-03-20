@@ -23,12 +23,15 @@ public class FindSecondLargestNumberusingList {
 
 		}
 
+		// sort the added List
+
 		Collections.sort(list);
 
 		System.out.println("Sorted List " + list);
 
 		// list.get(1);
 
+		// Get the 2nd Largest number from sorted List
 		System.out.println("Second Largerst integer in the List Array is " + list.get(1));
 
 	}
