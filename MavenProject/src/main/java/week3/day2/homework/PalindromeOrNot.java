@@ -84,7 +84,7 @@ public class PalindromeOrNot {
 
 		else {
 
-			System.out.println("Given text is Palindrome");
+			System.out.println("Given text is a Palindrome");
 
 		}
 
