@@ -5,9 +5,9 @@ import java.util.List;
 
 public class PalindromeOrNot {
 
-	public static void main(String[] args) {
+	static boolean flag;
 
-		boolean flag = false;
+	public static void main(String[] args) {
 
 		String input = "A man, a plan, a canal: Panama";
 
@@ -21,64 +21,71 @@ public class PalindromeOrNot {
 
 		String intoLowercase = withOutspace.toLowerCase();
 
-		System.out.println("intoLowercase " + intoLowercase);
+		System.out.println("input Text String " + intoLowercase);
 
 		int len = intoLowercase.length() - 1;
+
+		System.out.println("Charactor Length of Given String is : " + len);
 
 		List<Character> forward = new ArrayList<>();
 		List<Character> backward = new ArrayList<>();
 
+		// adding the char to the list from left to right
+
 		for (int i = 0; i <= len; i++) {
 
-			char forwardText = intoLowercase.charAt(i);
+			forward.add(intoLowercase.charAt(i));
 
-			// System.out.println("forwardText " + forwardText);
-
-			forward.add(forwardText);
-
-			System.out.println(forward.add(forwardText));
+			System.out.println(intoLowercase.charAt(i));
 
 		}
 
-		for (int j = intoLowercase.length() - 1; j >= 0; j--) {
+		System.out.println(forward.size());
 
-			char backwardText = intoLowercase.charAt(j);
+		System.out.println("forward text in Array" + forward);
 
-			// System.out.println("backwardText " + backwardText);
+		int forwardlistSize = forward.size() - 1;
 
-			backward.add(backwardText);
+		System.out.println("forward Text listSize " + forwardlistSize);
 
-			System.out.println(backward.add(backwardText));
+		// adding the char to the list from left to right
+
+		for (int j = intoLowercase.length() - 1; j >= 0;) {
+
+			backward.add(intoLowercase.charAt(j));
+
+			System.out.println(intoLowercase.charAt(j));
+
+			--j;
 
 		}
+
+		System.out.println("backward text in Array" + backward);
+
+		int backwardlistSize = forward.size() - 1;
+
+		System.out.println("backward Text listSize " + backwardlistSize);
 
 		for (int k = 0; k <= forward.size() - 1; k++) {
 
-			// System.out.println(forward.get(k));
-
-			// forward.get(k).charValue();
-
-			// System.out.println(forward.get(k).charValue());
-
-			// System.out.println(backward.get(k));
-
-			// System.out.println(backward.get(k).charValue());
-
-			if ((forward.get(k) != backward.get(k))) {
+			if (forward.get(k) != backward.get(k)) {
 
 				flag = false;
 
 			}
+
 		}
 
-		if (flag) {
+		if (!flag) {
 
-			System.out.println("Palindrome");
+			System.out.println("Given text is not a Palindrome");
+
 		}
 
 		else {
 
-			System.out.println("Not Palindrome");
+			System.out.println("Given text is Palindrome");
+
 		}
 
 	}
