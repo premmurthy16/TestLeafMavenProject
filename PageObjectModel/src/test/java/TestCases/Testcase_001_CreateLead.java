@@ -1,3 +1,6 @@
+package TestCases;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
@@ -13,36 +16,33 @@ public class Testcase_001_CreateLead extends BaseClass{
 	
 	@Test
 	public void runCreateLead() {
-		/*
-		 * LoginPage login=new LoginPage(); login.enterUserName(); login.enterPwd();
-		 * login.clickLoginBtn();
-		 */
+	
 		
-		new LoginPage()
+		new LoginPage(driver)
 		.enterUserName()
 		.enterPwd()
 		.clickLoginBtn();
 		
-		new HomePage()
+		new HomePage(driver)
 		.verifyPageInfo()
 		.clickCrmsfaLink();
 	
 		
 		
-		new MyHomePage()
+		new MyHomePage(driver)
 		.clickLeadsLink();
 		
 		
-		new MyLeadPage()
+		new MyLeadPage(driver)
 		.clickCreateLeadLink();
 		
-		new CreateLeadPage()
+		new CreateLeadPage(driver)
 		.enterCompanyName()
 		.enterFirstName()
 		.enterLastName()
 		.clickSubmitButton();
 		
-		new ViewLeadPage()
+		new ViewLeadPage(driver)
 		
 		.verifyCreatedLead();
 		

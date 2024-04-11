@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-07T12:01:13 IST" name="Default suite" finished-at="2024-04-07T12:01:28 IST" duration-ms="14329">
+  <suite started-at="2024-04-08T10:15:54 IST" name="Suite" finished-at="2024-04-08T10:16:25 IST" duration-ms="31709">
     <groups>
     </groups>
-    <test started-at="2024-04-07T12:01:13 IST" name="Default test" finished-at="2024-04-07T12:01:28 IST" duration-ms="14329">
-      <class name="Testcase_001_CreateLead">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:Testcase_001_CreateLead@593aaf41]" started-at="2024-04-07T12:01:04 IST" name="preCondition" finished-at="2024-04-07T12:01:13 IST" duration-ms="9073" status="PASS">
+    <test started-at="2024-04-08T10:15:54 IST" name="Test" finished-at="2024-04-08T10:16:25 IST" duration-ms="31709">
+      <class name="TestCases.Testcase_001_Login">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:TestCases.Testcase_001_Login@25084a1e]" started-at="2024-04-08T10:15:54 IST" name="preCondition" finished-at="2024-04-08T10:16:07 IST" duration-ms="13178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="runCreateLead()[pri:0, instance:Testcase_001_CreateLead@593aaf41]" started-at="2024-04-07T12:01:13 IST" name="runCreateLead" finished-at="2024-04-07T12:01:27 IST" duration-ms="14161" status="PASS">
+        <test-method signature="runCreateLead()[pri:0, instance:TestCases.Testcase_001_Login@25084a1e]" started-at="2024-04-08T10:16:07 IST" name="runCreateLead" finished-at="2024-04-08T10:16:08 IST" duration-ms="1151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runCreateLead -->
-        <test-method is-config="true" signature="postCondition()[pri:0, instance:Testcase_001_CreateLead@593aaf41]" started-at="2024-04-07T12:01:27 IST" name="postCondition" finished-at="2024-04-07T12:01:28 IST" duration-ms="137" status="PASS">
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:TestCases.Testcase_001_Login@25084a1e]" started-at="2024-04-08T10:16:08 IST" name="postCondition" finished-at="2024-04-08T10:16:08 IST" duration-ms="295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-      </class> <!-- Testcase_001_CreateLead -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- TestCases.Testcase_001_Login -->
+      <class name="TestCases.Testcase_001_CreateLead">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:TestCases.Testcase_001_CreateLead@54bff557]" started-at="2024-04-08T10:15:54 IST" name="preCondition" finished-at="2024-04-08T10:16:07 IST" duration-ms="13109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method signature="runCreateLead()[pri:0, instance:TestCases.Testcase_001_CreateLead@54bff557]" started-at="2024-04-08T10:16:07 IST" name="runCreateLead" finished-at="2024-04-08T10:16:25 IST" duration-ms="18345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runCreateLead -->
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:TestCases.Testcase_001_CreateLead@54bff557]" started-at="2024-04-08T10:16:25 IST" name="postCondition" finished-at="2024-04-08T10:16:25 IST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+      </class> <!-- TestCases.Testcase_001_CreateLead -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

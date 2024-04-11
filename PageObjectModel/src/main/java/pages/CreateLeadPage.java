@@ -1,12 +1,16 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import base.BaseClass;
 
 public class CreateLeadPage extends BaseClass{
 	
-	
+public CreateLeadPage(ChromeDriver driver) {
+		
+		this.driver=driver;
+	}
     
     public CreateLeadPage enterCompanyName() {
     	
@@ -32,7 +36,7 @@ public class CreateLeadPage extends BaseClass{
     	
     	driver.findElement(By.name("submitButton")).click();
     	
-    	return new ViewLeadPage();
+    	return new ViewLeadPage(driver);
     	
     	
     	

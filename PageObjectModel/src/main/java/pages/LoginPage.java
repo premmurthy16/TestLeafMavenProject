@@ -8,6 +8,11 @@ import base.BaseClass;
 
 public class LoginPage extends BaseClass{
 	
+	public LoginPage(ChromeDriver driver) {
+		
+		this.driver=driver;
+	}
+	
     
 	
 	public LoginPage enterUserName() {
@@ -29,7 +34,7 @@ public HomePage clickLoginBtn() {
 	
 	driver.findElement(By.className("decorativeSubmit")).click();
 	
-	return new HomePage();
+	return new HomePage(driver);
 	
 	
 }

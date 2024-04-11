@@ -1,10 +1,16 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import base.BaseClass;
 
 public class HomePage extends BaseClass {
+	
+public HomePage(ChromeDriver driver) {
+		
+		this.driver=driver;
+	}
 	
 	public HomePage verifyPageInfo() {
 		
@@ -36,7 +42,7 @@ public class HomePage extends BaseClass {
 		
 		driver.findElement(By.partialLinkText("CRM")).click();
 		
-		return new MyHomePage();
+		return new MyHomePage(driver);
 		
 		
 		
