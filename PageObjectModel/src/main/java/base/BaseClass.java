@@ -27,7 +27,7 @@ public class BaseClass {
 		
 		driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		
